@@ -1,0 +1,1 @@
+export const API = 'https://github.com/Omared250/galleria_app/blob/main/data.json';
