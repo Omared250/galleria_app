@@ -1,1 +1,1 @@
-export const API = 'https://github.com/Omared250/galleria_app/blob/main/data.json';
+export const API = 'https://omared250.github.io/galleria_app/data.json';
