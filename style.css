@@ -1,0 +1,45 @@
+/*------------------------- General style -------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*------------------------- Header --------------------------*/
+
+.header {
+    width: 95%;
+    margin: auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px rgb(190, 187, 187) solid;
+}
+
+.header img {
+    width: 10rem;
+}
+
+.header button {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: .80rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    opacity: 0.4;
+}
+
+.header button:hover {
+    opacity: 1;
+}
