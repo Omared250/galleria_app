@@ -56,20 +56,50 @@
     grid-template-rows: repeat(250, 5px);
 }
 
+.paint__preview {
+    display: flex;
+    flex-direction: column;
+}
+
 .paint__image {
     width: 18rem;
     z-index: 0;
 }
 
 .paint__info {
-    width: fit-content;
+    position: relative;
+    margin: -7rem auto 0 auto;
+    width: 15rem;
     z-index: 1;
-    margin-top: -5rem;
-    font-size: 14px;
-    color: white;
+
+    font-family: 'Libre Baskerville', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.paint__name {
+    width: 91%;
+    margin: 0 auto 8px auto;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.875rem;
+}
+
+.paint__artist {
+    width: 91%;
+    margin: 0 auto 0 auto;
+    font-size: .75rem;
 }
 
 /*------------ Grid paint positions -----------------*/
+
+.grid_cell_1 .paint__info {
+    margin-top: -5rem;
+}
+
+.grid_cell_3 .paint__info {
+    margin-top: -5rem;
+}
 
 .grid_cell_5 {
     grid-row: 51 / auto;
@@ -99,6 +129,10 @@
     grid-row: 133 / auto;
 }
 
+.grid_cell_10 .paint__info {
+    margin-top: -5rem;
+}
+
 .grid_cell_11 {
     grid-column: 4 / 5;
     grid-row: 101 / auto;
@@ -118,7 +152,15 @@
     grid-row: 151 / auto;
 }
 
+.grid_cell_14 .paint__info {
+    margin-top: -5rem;
+}
+
 .grid_cell_15 {
     grid-column: 4 / 5;
     grid-row: 183 / auto;
+}
+
+.grid_cell_15 .paint__info {
+    margin-top: -5rem;
 }
