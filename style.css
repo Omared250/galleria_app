@@ -43,3 +43,82 @@
 .header button:hover {
     opacity: 1;
 }
+
+/*-------------------- Paints style --------------------------*/
+
+.paints__container {
+    max-width: 1440px;
+    width: 95%;
+    margin: 5rem auto 0 auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(250, 5px);
+}
+
+.paint__image {
+    width: 18rem;
+    z-index: 0;
+}
+
+.paint__info {
+    width: fit-content;
+    z-index: 1;
+    margin-top: -5rem;
+    font-size: 14px;
+    color: white;
+}
+
+/*------------ Grid paint positions -----------------*/
+
+.grid_cell_5 {
+    grid-row: 51 / auto;
+}
+
+.grid_cell_6 {
+    grid-column: 2 / 3;
+    grid-row: 78 / auto;
+}
+
+.grid_cell_7 {
+    grid-column: 3 / 4;
+    grid-row: 57 / auto;
+}
+
+.grid_cell_8 {
+    grid-column: 4 / 5;
+    grid-row: 51 / auto;
+}
+
+.grid_cell_9 {
+    grid-row: 117 / auto;
+}
+
+.grid_cell_10 {
+    grid-column: 2 / 3;
+    grid-row: 133 / auto;
+}
+
+.grid_cell_11 {
+    grid-column: 4 / 5;
+    grid-row: 101 / auto;
+}
+
+.grid_cell_12 {
+    grid-row: 197 / auto;
+}
+
+.grid_cell_13 {
+    grid-column: 2 / 3;
+    grid-row: 185 / auto;
+}
+
+.grid_cell_14 {
+    grid-column: 3 / 4;
+    grid-row: 151 / auto;
+}
+
+.grid_cell_15 {
+    grid-column: 4 / 5;
+    grid-row: 183 / auto;
+}
