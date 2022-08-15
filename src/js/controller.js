@@ -1,3 +1,8 @@
 import * as model from './model.js';
+import paintView from './views/paintView.js';
 
-model.loadAllPaints();
+const init = function() {
+    paintView.renderPaint();
+};
+
+init();

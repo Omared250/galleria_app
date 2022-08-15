@@ -71,6 +71,11 @@
     z-index: 1;
 }
 
+.lazy__img {
+    opacity: 0;
+    transform: translateY(8rem);
+}
+
 .paint__info {
     position: relative;
     margin: -7rem auto 0 auto;
