@@ -1,6 +1,13 @@
 class paint {
     _parentEl = document.querySelector('.paints__container');
 
+    addHandlerPage(handler) {
+        ['load'].forEach(ev => window.addEventListener(ev, (e) => {
+            e.preventDefault();
+            handler();
+        }));
+    }
+
     renderPaint() {
         const markup = this._generateMarkupPaint();
         this._parentEl.insertAdjacentHTML('beforeend', markup);
