@@ -9,8 +9,13 @@ class paint {
     }
 
     renderPaint() {
+        this._clearParent();
         const markup = this._generateMarkupPaint();
         this._parentEl.insertAdjacentHTML('beforeend', markup);
+    }
+
+    _clearParent() {
+        this._parentEl.innerHTML = '';
     }
 
     _generateMarkupPaint() {
