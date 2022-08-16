@@ -185,3 +185,108 @@
 .grid_cell_15 .paint__info {
     margin-top: -5rem;
 }
+
+/*------------------ SLIDE STYLE -----------------------*/
+
+.slides {
+    width: 95%;
+    display: flex;
+    margin: 5rem auto 0 auto;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+.slide_large_img {
+    width: 30rem;
+}
+
+.slide_small_img {
+    display: none;
+}
+
+.icon__link {
+    position: relative;
+    width: 10rem;
+    display: flex;
+    margin: -5rem 0 0 1rem;
+    padding: 1rem 0.8rem;
+    justify-content: space-evenly;
+    z-index: 2;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+.icon__img {
+    width: .9rem;
+}
+
+.icon__link:hover {
+    cursor: pointer;
+    background-color: rgba(100, 98, 98, 0.7);
+}
+
+.view_link {
+    font-size: .8rem;
+}
+
+.paint_title {
+    display: flex;
+    width: 110rem;
+    margin-left: -4rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paint__details {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.detail_paint_name {
+    width: 100%;
+    font-size: 3.5rem;
+}
+
+.detail_paint_artist {
+    font-size: .93rem;
+    margin-top: .9rem;
+}
+
+.artist__img {
+    width: 8rem;
+    margin: 0 0 -2rem 6rem;
+}
+
+.paint__description_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.paint__year {
+    margin: 0 0 0 auto;
+    font-size: 12.5rem;
+    color: rgba(178, 175, 175, 0.2);
+}
+
+.paint__description {
+    width: 60%;
+    line-height: 2rem;
+    margin: -5.5rem auto 0 auto;
+    font-size: .9rem;
+}
+
+.paint_description_link {
+    font-size: .61rem;
+    word-spacing: 2.5px;
+    margin: 1rem 0 0 7.2rem;
+    color: #000;
+    opacity: 0.5;
+}
+
+.paint_description_link:hover {
+    opacity: 1;
+}

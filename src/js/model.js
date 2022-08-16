@@ -9,7 +9,7 @@ const artObject = function(art) {
     return {
         artistName : art.artist.name,
         artistPicture : art.artist.image,
-        artitsSource : art.source,
+        paintSource : art.source,
         paintName : art.name,
         paintYear : art.year,
         paintDescription : art.description,
