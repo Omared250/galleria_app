@@ -1,5 +1,6 @@
 import * as model from './model.js';
 import detailPaintView from './views/detailPaintView.js';
+import footerView from './views/footerView.js';
 import paintView from './views/paintView.js';
 
 const controlRenderDetails = function(arr) {
@@ -31,6 +32,7 @@ const detailPaint = function(paName) {
         const homeSection = document.querySelector('.paints__container')
         homeSection.style.display = 'none';
         controlRenderDetails(model.artState.art)
+        footerView.renderFooter();
     } catch (err) {
         console.error(err);
     }
