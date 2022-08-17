@@ -1,5 +1,6 @@
 class paint {
     _parentEl = document.querySelector('.paints__container');
+    _slidesPage = document.querySelector('.slides__container');
 
     addHandlerPage(handler) {
         ['load'].forEach(ev => window.addEventListener(ev, (e) => {
@@ -10,6 +11,8 @@ class paint {
 
     renderPaint() {
         this._clearParent();
+        this._slidesPage.style.display = 'none'
+        
         const markup = this._generateMarkupPaint();
         this._parentEl.insertAdjacentHTML('beforeend', markup);
     }

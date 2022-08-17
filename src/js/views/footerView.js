@@ -2,9 +2,12 @@ class footerView {
     _parentEl = document.querySelector('.footer__container');
     _data;
 
-    renderFooter() {
+    renderFooter(data) {
+        this._data = data;
         const markup = this._generateFooterMarkup();
+
         this._parentEl.style.display = 'flex';
+        this._parentEl.innerHTML = '';
         this._parentEl.insertAdjacentHTML('beforeend', markup);
     }
 
@@ -12,8 +15,8 @@ class footerView {
         return `
         <span class="footer__progress__bar"></span>
         <div class="footer__paint__details">
-            <h2 class="footer_paint_name">Starry Night</h2>
-            <h3 class="footer_paint_artist">Vincent Van Gogh</h3>
+            <h2 class="footer_paint_name">${this._data.paintName}</h2>
+            <h3 class="footer_paint_artist">${this._data.artistName}</h3>
         </div>
         <div class="sliders">
             <img class="button__slider__left" src="./src/images/icons/icon-backward.png" alt="previews image button">

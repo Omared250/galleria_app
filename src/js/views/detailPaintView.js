@@ -1,9 +1,14 @@
 class detailPaint {
     _paintParentEl = document.querySelector('.slides__container');
+    _homeSection = document.querySelector('.paints__container')
+    _slidesPage = document.querySelector('.slides__container');
     _data;
 
     renderSlide(data) {
         this._data = data;
+
+        this._homeSection.style.display = 'none';
+        this._slidesPage.style.display = 'flex'
 
         const markup = this._generateSlideMarkup();
         this._paintParentEl.insertAdjacentHTML('beforeend', markup);        

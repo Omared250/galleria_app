@@ -30,55 +30,75 @@ const homePage = async function() {
 const slider = function(numSlide) {
     const slides = document.querySelectorAll('.slide');
 
-    // let curSlide = numSlide;
-    // const maxSlide = slides.length;
-
     const goToSlide = function(slide) {
         slides.forEach((s, i) =>
         s.style.transform = `translateX(${100 * (i - slide)}%)`)
     }
     goToSlide(numSlide);
-    // // Next Slide
-    // const nextSlide = function() {
-    //     if(curSlide === maxSLide - 1) {
-    //         curSlide = 0;
-    //     } else {
-    //         curSlide++;
-    //     }
-
-    //     goToSlide(curSlide);
-    // }
-
-    // // Prev Slide
-    // const prevSlide = function() {
-    //     if (curSlide === 0) {
-    //         curSlide = maxSLide - 1;
-    //     } else {
-    //         curSlide--;
-    //     }
-
-    //     goToSlide(curSlide);
-    // }
 }
 
 const detailPaint = function(paName) {
     try {
-        const homeSection = document.querySelector('.paints__container')
-        homeSection.style.display = 'none';
-
         controlRenderDetails(model.artState.art)
-        footerView.renderFooter();
-
         const paintIndex = model.artState.art.findIndex(p => p.paintName === paName);
-        console.log(paintIndex);
+        
+        const filterPaint = model.artState.art.filter((p, i) => {
+            if (i === paintIndex) {
+                return p;
+            }
+        })
+        footerView.renderFooter(filterPaint[0]);
+
         slider(paintIndex);
+        footerSlide(paintIndex);
     } catch (err) {
         console.error(err);
     }
 }
 
-const footerSlide = function() {
+const footerSlide = function(slidePosition) {
     try {
+        const slides = document.querySelectorAll('.slide');
+        const backwardSlide = document.querySelector('.button__slider__left');
+        const forwardSlide = document.querySelector('.button__slider__right');
+
+        let curSlide = slidePosition;
+        const maxSlide = slides.length;
+
+        // Next Slide
+        const nextSlide = function() {
+            if(curSlide === maxSlide - 1) {
+                curSlide = 0;
+            } else {
+                curSlide++;
+            }
+            slider(curSlide);
+        }
+        
+        // Prev Slide
+        const prevSlide = function() {
+            if (curSlide === 0) {
+                curSlide = maxSlide - 1;
+            } else {
+                curSlide--;
+            }
+            slider(curSlide);
+        }
+
+        forwardSlide.addEventListener('click', e => {
+            e.preventDefault();
+            nextSlide();
+            const paintFilter = model.artState.art.filter((p, i) => i === curSlide ? p : null)
+            footerView.renderFooter(paintFilter[0]);
+            footerSlide(curSlide);
+        });
+        backwardSlide.addEventListener('click', e => {
+            e.preventDefault();
+            prevSlide();
+            const paintFilter = model.artState.art.filter((p, i) => i === curSlide ? p : null)
+            footerView.renderFooter(paintFilter[0]);
+            footerSlide(curSlide);
+        });
         
     } catch (err) {
         console.error(err);
