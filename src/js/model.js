@@ -30,7 +30,6 @@ export const loadAllPaints = async function() {
     try {
         const data = await AJAX(API);
         artState.art = dataPaints(data);
-        console.log(artState);
     } catch (err) {
         throw err;
     }
