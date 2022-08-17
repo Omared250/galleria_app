@@ -61,9 +61,12 @@ const footerSlide = function(slidePosition) {
         const slides = document.querySelectorAll('.slide');
         const backwardSlide = document.querySelector('.button__slider__left');
         const forwardSlide = document.querySelector('.button__slider__right');
+        const progressBar = document.querySelector('.footer__progress__bar');
 
         let curSlide = slidePosition;
         const maxSlide = slides.length;
+
+        progressBar.style.width = `${((curSlide + 1) / maxSlide) * 100}%`
 
         // Next Slide
         const nextSlide = function() {
@@ -92,6 +95,7 @@ const footerSlide = function(slidePosition) {
             footerView.renderFooter(paintFilter[0]);
             footerSlide(curSlide);
         });
+
         backwardSlide.addEventListener('click', e => {
             e.preventDefault();
             prevSlide();
