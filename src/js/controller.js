@@ -2,9 +2,13 @@ import * as model from './model.js';
 import detailPaintView from './views/detailPaintView.js';
 import paintView from './views/paintView.js';
 
+const controlRenderDetails = function(arr) {
+    arr.forEach(paint => detailPaintView.renderSlide(paint))
+}
+
 const controlHomePage = async function() {
     try {
-        // paintView.renderPaint();
+        paintView.renderPaint();
         await model.loadAllPaints();
 
         const parentEl = document.querySelector('.paints__container');
@@ -24,7 +28,9 @@ const controlHomePage = async function() {
 
 const detailPaint = function(paName) {
     try {
-        console.log(paName);
+        const homeSection = document.querySelector('.paints__container')
+        homeSection.style.display = 'none';
+        controlRenderDetails(model.artState.art)
     } catch (err) {
         console.error(err);
     }

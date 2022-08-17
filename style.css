@@ -187,12 +187,23 @@
 }
 
 /*------------------ SLIDE STYLE -----------------------*/
+.slides__container {
+    max-width: 1330px;
+    margin: auto;
+    display: flex;
 
-.slides {
-    width: 95%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
     display: flex;
     margin: 5rem auto 0 auto;
+    padding: 1rem;
+    justify-content: center;
     font-family: 'Libre Baskerville', sans-serif;
+
+    transition: transform 1s;
 }
 
 .slide_large_img {
@@ -257,7 +268,7 @@
 
 .artist__img {
     width: 8rem;
-    margin: 0 0 -2rem 6rem;
+    margin: 0 0 0 6rem;
 }
 
 .paint__description_container {
@@ -275,7 +286,7 @@
 .paint__description {
     width: 60%;
     line-height: 2rem;
-    margin: -5.5rem auto 0 auto;
+    margin: -7.5rem auto 0 auto;
     font-size: .9rem;
 }
 
@@ -289,4 +300,52 @@
 
 .paint_description_link:hover {
     opacity: 1;
+}
+
+/*--------------------Footer Slide ------------------------*/
+
+.footer__container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 7rem;
+    padding: 0 3rem;
+
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+.footer__progress__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 6.66%;
+    background-color: #000;   
+}
+
+.footer_paint_name {
+    font-size: 1.9rem;
+}
+
+.footer_paint_artist {
+    margin-top: .50rem;
+    font-size: .75rem;
+    font-weight: 100;
+}
+
+.sliders {
+    width: 8rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sliders img {
+    width: 2.5rem;
+}
+
+.sliders img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
