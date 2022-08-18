@@ -308,6 +308,67 @@
     opacity: 1;
 }
 
+@media (max-width: 1217px) {
+    .slides__container {
+        width: 1000px;
+        overflow: hidden;
+    }
+
+    .paint_title {
+        display: flex;
+        height: fit-content;
+        margin-left: -13.2rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .paint__details {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        text-align: start;
+    }
+
+    .detail_paint_name {
+        font-size: 2.5rem;
+    }
+
+    .artist__img {
+        position: absolute;
+        bottom: -2rem;
+        right: 1rem;
+        width: 8rem;
+        margin: 0 0 0 6rem;
+    }
+
+    .paint__description_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .paint__year {
+        margin: 0 auto 0 auto;
+        font-size: 9.5rem;
+        color: rgba(178, 175, 175, 0.2);
+    }
+    
+    .paint__description {
+        width: 85%;
+        line-height: 2rem;
+        margin: -3.5rem auto 0 auto;
+        font-size: .9rem;
+    }
+    
+    .paint_description_link {
+        font-size: .61rem;
+        word-spacing: 2.5px;
+        margin: 5rem 0 0 3.4rem;
+        color: #000;
+        opacity: 0.5;
+    }
+}
+
 /*--------------------Footer Slide ------------------------*/
 
 .footer__container {
