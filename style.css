@@ -354,15 +354,15 @@
 }
 
 @media (max-width: 1025px) {
-    .slide {
-        padding: 0;
-        flex-direction: column;
-    }
-    
     .slides__container {
         width: 700px;
         height: 70rem;
         overflow: hidden;
+    }
+
+    .slide {
+        padding: 0;
+        flex-direction: column;
     }
 
     .paint_title {
@@ -403,6 +403,78 @@
     
     .paint_description_link {
         margin: 1rem 0 2rem 5rem;
+    }
+}
+
+@media (max-width: 701px) {
+    .slides__container {
+        width: 90%;
+        height: 68rem;
+        overflow: hidden;
+    }
+
+    .slide {
+        margin: 1rem auto 0 auto;
+    }
+
+    .slide_large_img {
+        display: none;
+        width: 0;
+    }
+    
+    .slide_small_img {
+        display: block;
+        width: 30rem;
+    }
+
+    .icon__link {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        margin: 0 0 0 0;
+    }
+    
+    .paint_title {
+        position: relative;
+        flex-direction: column;
+        width: 18rem;
+        height: fit-content;
+        margin-left: 8.71rem;
+        margin-top: -5rem;
+    }
+
+    .paint__details {
+        padding: 1rem;
+    }
+
+    .detail_paint_name {
+        font-size: 2rem;
+    }
+
+    .artist__img {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 5rem;
+        margin: auto 1rem 0;
+    }
+
+    .paint__description_container {
+        margin: 0;
+    }
+    
+    .paint__year {
+        margin: -2rem 0 0 auto;
+        font-size: 6.5rem;
+    }
+    
+    .paint__description {
+        width: 100%;
+        margin: -2.5rem auto 0 auto;
+    }
+    
+    .paint_description_link {
+        margin: 1rem 0 0 0;
     }
 }
 
@@ -469,7 +541,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: fit-content;
-    height: 100%;
+    height: fit-content;
 
     padding: 0.3rem;
     border-radius: 5px;

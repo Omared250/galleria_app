@@ -18,8 +18,8 @@ class detailPaint {
         return `
         <section class="slide">
             <div class="paint__view">
-                <img class="slide_large_img" src="${this._data.paintLargeImg}" alt="starry night large">
-                <img class="slide_small_img" src="${this._data.paintSmallImg}" alt="starry night large">
+                <img class="slide_large_img" src="${this._data.paintLargeImg}" alt="${this._data.paintName} large">
+                <img class="slide_small_img" src="${this._data.paintSmallImg}" alt="${this._data.paintName} large">
                 <div class="icon__link">
                     <img class="icon__img" src="./src/images/icons/icon-view.png" alt="icon view">
                     <p class="view_link">VIEW IMAGE</p>
