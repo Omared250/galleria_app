@@ -563,6 +563,10 @@
         font-size: .7rem;
     }
 
+    .sliders {
+        justify-content: space-evenly;
+    }
+
     .sliders img {
         width: 1.5rem;
     }
