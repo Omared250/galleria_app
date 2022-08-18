@@ -1,6 +1,7 @@
 import * as model from './model.js';
 import detailPaintView from './views/detailPaintView.js';
 import footerView from './views/footerView.js';
+import modalView from './views/modalView.js';
 import paintView from './views/paintView.js';
 
 const controlRenderDetails = function(arr) {
@@ -59,10 +60,20 @@ const slider = function(numSlide) {
     goToSlide(numSlide);
 }
 
+const showGalleryPicture = function(indexPicture) {
+    const galleryPicture = document.querySelectorAll('.icon__link');
+
+    const galleryFiltered = model.artState.art.filter((p, i) => i === indexPicture ? p : null)
+
+    galleryPicture.forEach(p => p.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalView.renderModal(galleryFiltered[0]);
+    }))
+}
+
 const detailPaint = function(paName) {
     try {
         controlRenderDetails(model.artState.art)
-        const showGalleryPicture = document.querySelector('.icon__link');
         const paintIndex = model.artState.art.findIndex(p => p.paintName === paName);
         
         const filterPaint = model.artState.art.filter((p, i) => {
@@ -74,6 +85,7 @@ const detailPaint = function(paName) {
 
         slider(paintIndex);
         footerSlide(paintIndex);
+        showGalleryPicture(paintIndex);
     } catch (err) {
         console.error(err);
     }
@@ -117,6 +129,7 @@ const footerSlide = function(slidePosition) {
             const paintFilter = model.artState.art.filter((p, i) => i === curSlide ? p : null)
             footerView.renderFooter(paintFilter[0]);
             footerSlide(curSlide);
+            showGalleryPicture(curSlide);
         });
 
         backwardSlide.addEventListener('click', e => {
@@ -125,6 +138,8 @@ const footerSlide = function(slidePosition) {
             const paintFilter = model.artState.art.filter((p, i) => i === curSlide ? p : null)
             footerView.renderFooter(paintFilter[0]);
             footerSlide(curSlide);
+            showGalleryPicture(curSlide);
+
         });
         
     } catch (err) {
