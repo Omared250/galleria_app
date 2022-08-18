@@ -29,13 +29,13 @@ const homePage = async function() {
 
         slideShow.addEventListener('click', (e) => {
             e.preventDefault();
-            const detailButton = slideShow.innerHTML;
-            
-            if (detailButton === 'start slideshow') {
+            const slideShowValue = slideShow.innerHTML;
+
+            if (slideShowValue === 'start slideshow') {
                 detailPaint('Starry Night');
                 slideShow.innerHTML = 'stop slideshow';
 
-            } else if (detailButton === 'stop slideshow') {
+            } else if (slideShowValue === 'stop slideshow') {
                 parentEl.style.display = 'grid';
                 slidesContain.style.display = 'none';
                 slidesContain.innerHTML = ''
@@ -62,6 +62,7 @@ const slider = function(numSlide) {
 const detailPaint = function(paName) {
     try {
         controlRenderDetails(model.artState.art)
+        const showGalleryPicture = document.querySelector('.icon__link');
         const paintIndex = model.artState.art.findIndex(p => p.paintName === paName);
         
         const filterPaint = model.artState.art.filter((p, i) => {
