@@ -13,6 +13,9 @@ const homePage = async function() {
         await model.loadAllPaints();
 
         const parentEl = document.querySelector('.paints__container');
+        const slideShow = document.querySelector('.header__button');
+        const footerContain = document.querySelector('.footer__container');
+        const slidesContain = document.querySelector('.slides__container');
 
         parentEl.addEventListener('click', (e) => {
             e.preventDefault();
@@ -21,6 +24,25 @@ const homePage = async function() {
             const newDom = document.createRange().createContextualFragment(paint);
             const paintName = newDom.querySelector('.paint__name').innerHTML;
             detailPaint(paintName);
+            slideShow.innerHTML = 'stop slideshow';
+        })
+
+        slideShow.addEventListener('click', (e) => {
+            e.preventDefault();
+            const detailButton = slideShow.innerHTML;
+            
+            if (detailButton === 'start slideshow') {
+                detailPaint('Starry Night');
+                slideShow.innerHTML = 'stop slideshow';
+
+            } else if (detailButton === 'stop slideshow') {
+                parentEl.style.display = 'grid';
+                slidesContain.style.display = 'none';
+                slidesContain.innerHTML = ''
+                footerContain.style.display = 'none';
+                footerContain.innerHTML = ''
+                slideShow.innerHTML = 'start slideshow'
+            }
         })
     } catch (err) {
         console.error();
