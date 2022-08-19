@@ -142,7 +142,7 @@
     .paints__container {
         max-width: 100%;
         display: flex;
-        margin: 5rem auto 3rem auto;
+        margin: 2rem auto 3rem auto;
 
         flex-direction: column;
         justify-content: center;
@@ -768,4 +768,20 @@
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
     z-index: 5;
+}
+
+@media (max-width: 900px) {
+    .modal {
+        width: fit-content;
+        height: 25rem;
+
+        padding: 0;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal {
+        height: 20rem;
+    }
 }
