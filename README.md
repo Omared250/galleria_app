@@ -36,6 +36,7 @@ Users should be able to:
 ![Detail Design](https://github.com/Omared250/galleria_app/blob/main/src/design/Tablet-Detail.png)
 
 - Mobile Desing
+
 ![Home Design](https://github.com/Omared250/galleria_app/blob/main/src/design/Mobile-Home.png)
 ![Detail Design](https://github.com/Omared250/galleria_app/blob/main/src/design/Mobile-Detail.png)
 
