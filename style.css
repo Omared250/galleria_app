@@ -132,12 +132,24 @@
 
 @media (max-width: 981px) {
     .paints__container {
-        max-width: 90%;
+        max-width: 95%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(500, 5px);
     }
 }
 
+@media (max-width: 670px) {
+    .paints__container {
+        max-width: 100%;
+        display: flex;
+        margin: 5rem auto 3rem auto;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+}
 /*------------ Grid paint positions -----------------*/
 
 .grid_cell_1 .paint__info {
@@ -629,6 +641,13 @@
     
     .paint_description_link {
         margin: 1rem 0 0 0;
+    }
+}
+
+@media (max-width: 321px) {
+    .slides__container {
+        width: 93%;
+        height: 76rem;
     }
 }
 

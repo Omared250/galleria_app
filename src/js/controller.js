@@ -37,7 +37,11 @@ const homePage = async function() {
                 slideShow.innerHTML = 'stop slideshow';
 
             } else if (slideShowValue === 'stop slideshow') {
-                parentEl.style.display = 'grid';
+                if (screen.width < 670) {
+                    parentEl.style.display = 'flex'
+                } else {
+                    parentEl.style.display = 'grid'
+                }
                 slidesContain.style.display = 'none';
                 slidesContain.innerHTML = ''
                 footerContain.style.display = 'none';
