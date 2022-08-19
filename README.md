@@ -28,10 +28,12 @@ Users should be able to:
 ### Screenshot
 
 - Desktop Desing
+- 
 ![Home Design](https://github.com/Omared250/galleria_app/blob/main/src/design/Desktop-Home.png)
 ![Detail Design](https://github.com/Omared250/galleria_app/blob/main/src/design/Desktop-Detail.png)
 
 - Tablet Desing
+- 
 ![Home Design](https://github.com/Omared250/galleria_app/blob/main/src/design/Tablet-Home.png)
 ![Detail Design](https://github.com/Omared250/galleria_app/blob/main/src/design/Tablet-Detail.png)
 
